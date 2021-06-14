@@ -1,0 +1,10 @@
+.flex-box {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  margin: 20px;
+  height: 70px;
+  width: 100px;
+}
