@@ -18,15 +18,17 @@ const changeApp = {
     isActive: false,
 
     start() {
-        if (this.isActive) { return }
-        this.isActive=true
+      if (this.isActive) { return }
+      this.isActive = true
+      refs.startButton.disabled=true
         this.intervalID = setInterval(() => {
              refs.body.style.background=colors[randomIntegerFromInterval(0, (colors.length-1))]
         }, 1000);
     
     },
 
-    stop() {
+  stop() {
+      refs.startButton.disabled=false
         clearInterval(this.intervalID)
         this.isActive=false
     }
